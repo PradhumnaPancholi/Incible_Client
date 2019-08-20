@@ -1,5 +1,6 @@
 import React from 'react';
 import NavigationBar from "./navbar.component";
+import {Link} from "react-router-dom";
 import {Jumbotron, Button, Card} from "react-bootstrap";
 import Footer from "./footer.component";
  
@@ -15,17 +16,20 @@ export const Feature = ({imgSource='',title}) => {
 export const LandingPage = () => {
     return (
         <div>
-            <Jumbotron className="mb-0">
-                <h1 className="t-b mb-1 text-center">Welcome to Incible!</h1>
-                <p className="text-center">
+            <Jumbotron fluid className="mb-0">
+                <h1 className="t-b mb-1 text-center jumbotron-text">Welcome to Incible!</h1>
+                <h4 className="text-center jumbotron-text">
                     Incident management made easy. <br/>
-                </p>
-                <h5 className='t-b mt-3 text-center'>
+                </h4>
+                <h5 className='t-b mt-3 m-2 text-center jumbotron-text'>
                     Incible is made for every member of your team to plan, track, and organize tasks for your project.
                 </h5>
-                <p className="mt-3 text-center">
-                    <Button variant="primary">Learn more</Button>
-                </p>
+                <div className="text-center mb-2 signup-btn">
+                    <Link to="/signup">
+                        <Button variant="primary">Join Now</Button>
+                    </Link>
+                </div>
+                
             </Jumbotron>
             <div className="container">
                 <div className="t-b text-center p-3 reasons-tag">

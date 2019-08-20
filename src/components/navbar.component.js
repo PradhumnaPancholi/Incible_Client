@@ -3,6 +3,7 @@ import logo from "../incible-logo.png";
 import {Link} from "react-router-dom"
 import connect from "react-redux/es/connect/connect";
 import {highlightNavigationItem} from "../redux/helper.functions";
+import {Button} from "react-bootstrap/"
 
 const NavItem = (props) => {
     return (<li className={`ml-1 pl-1 nav-item navi ${props.className} ${highlightNavigationItem(props.href,window.location.pathname) && 'nav-a'}`}>
@@ -31,9 +32,9 @@ class NavigationBar extends Component {
         const {isLoggedIn, userProfile} = this.props;
         return (
             <React.Fragment>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <nav className="navbar navbar-expand-lg">
                     <Link className="navbar-brand" to="/">
-                        <img src={logo} className="w-logo" alt=""/>
+                    <i class="fas fa-italic"></i>ncible
                     </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
                             aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,22 +43,17 @@ class NavigationBar extends Component {
 
                     <div className="collapse navbar-collapse" id="navbarColor01">
                         <ul className="navbar-nav mr-auto">
-                            <NavItem href={"/"}>
-                                <NavItemIcon icon={'fa-home'} />
-                                Home <span className="sr-only">(current)</span>
-                            </NavItem>
-                            <NavItem href={"/incidents"}>
-                                <NavItemIcon icon={'fa-indent'} />
-                                Incidents
-                            </NavItem>
-                            <NavItem href={"/users"}>
-                                <NavItemIcon icon={'fa-user-friends'} />
-                                Users
-                            </NavItem>
+                            {isLoggedIn && (
+                                <NavItem href={"/incidents"}>
+                                    <NavItemIcon icon={'fa-indent'} />
+                                    Incidents
+                                </NavItem>
+                            )}
+                            
                         </ul>
                         <ul className={"navbar-nav float-right"}>
                             {isLoggedIn && (
-                                <div className="text-white text-center" style={{padding:8}}>
+                                <div className="text-center" style={{padding:8}}>
                                     Hey! {userProfile.firstName}
                                 </div>
                             )}
@@ -67,13 +63,8 @@ class NavigationBar extends Component {
                                 </NavItem>
                             )}
                             {!isLoggedIn && (
-                                <NavItem className={"float-right"} href={"/signup"}>
-                                    Signup
-                                </NavItem>
-                            )}
-                            {!isLoggedIn && (
-                                <NavItem className={"float-right"} href={"/login"}>
-                                    Login
+                                <NavItem className={"float-right pr-5"} href={"/login"}>
+                                    <Button className="loginBtn">Login</Button>
                                 </NavItem>
                             )}
                         </ul>

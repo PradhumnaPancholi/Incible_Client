@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './App.css';
+import './styles/style.css'
 import { Provider } from "react-redux";
 import {LandingPage} from "./components/landing.page.component";
 import SignIn from "./components/signin.component";

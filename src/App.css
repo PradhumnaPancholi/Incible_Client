@@ -2,6 +2,9 @@
 .App {
   /*text-align: center;*/
 }
+body {
+  background-color: #5E92BF;
+}
 /*Font*/
 @font-face {
   font-family: Circular;
@@ -59,9 +62,6 @@
 .logo {
   width: 100px;
 }
-.login {
-  min-width: 250px;
-}
 .w-100 {
   width: 100%;
 }
@@ -116,11 +116,7 @@
 }
 
 /*Navigation Bar*/
-.navbar-nav > .nav-link:hover {
-  background-color: #292929;
-  border-radius: 5px;
-  transition: ease-in 100ms;
-}
+
 
 .navi:hover {
   background-color: #0d0d0d !important;
