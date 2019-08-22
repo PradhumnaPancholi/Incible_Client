@@ -3,7 +3,7 @@ import {NODE_ENV} from "./constants";
 
 export const resolveHost = (url) => {
     if (process.env.NODE_ENV == NODE_ENV.development)
-        return `http://localhost:8000${url}`;
+        return `https://inciblebck.herokuapp.com${url}`;
     else
         // TODO: Insert Backend url here
         return `https://inciblebck.herokuapp.com${url}`;

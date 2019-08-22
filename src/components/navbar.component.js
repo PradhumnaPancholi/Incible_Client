@@ -53,7 +53,7 @@ class NavigationBar extends Component {
                         </ul>
                         <ul className={"navbar-nav float-right"}>
                             {isLoggedIn && (
-                                <div className="text-center" style={{padding:8}}>
+                                <div className="text-center user-name" style={{padding:8}}>
                                     Hey! {userProfile.firstName}
                                 </div>
                             )}

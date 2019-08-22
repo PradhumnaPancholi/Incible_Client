@@ -101,9 +101,7 @@ body {
 .container input:checked ~ .checkmark {
   background-color: #59CD90;
 }
-.w-logo {
-  width: 40px;
-}
+
 
 /*For incident form*/
 .incident-form{
@@ -189,22 +187,8 @@ body {
 }
 
 /*landing page*/
-.feature-card{
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto; 
-  width: 18rem;
-  margin-top: 5%;
-  margin-bottom: 5%; 
-}
 
-.card-block{
-  font-size: 700%;
-}
 
-.reasons-tag{
-  text-decoration: underline;
-}
 
 /*for footer*/
 .footer{

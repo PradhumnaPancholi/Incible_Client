@@ -79,4 +79,78 @@
   border: 5px solid #1F3140;
 }
 
+.feature-card {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 18rem;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.card-block {
+  font-size: 700%;
+}
+
+.reasons-tag {
+  text-decoration: underline;
+}
+
+.login {
+  margin-top: 5vh;
+}
+
+.login .card-header, .login .card-footer {
+  background-color: #1F3140;
+  color: #7CC2FF;
+}
+
+.login .card-body {
+  background-color: #3E6180;
+}
+
+.login .card {
+  border: none;
+}
+
+.login-btn {
+  background-color: #1F3140;
+  color: #7CC2FF;
+  width: 100%;
+  height: 100%;
+}
+
+.login-btn:hover {
+  color: #1F3140;
+  background-color: #7CC2FF;
+}
+
+.login-btn-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15%;
+  width: 50%;
+}
+
+.login a {
+  color: #7CC2FF;
+}
+
+.login input {
+  background-color: #1F3140;
+  color: #7CC2FF;
+  border: none;
+}
+.login label {
+  color: #1F3140;
+}
+.login input:focus {
+  background-color: #1F3140;
+  color: #7CC2FF;
+  border: none;
+}
+.login input::placeholder {
+  color: #7CC2FF;
+}
+
 /*# sourceMappingURL=style.css.map */

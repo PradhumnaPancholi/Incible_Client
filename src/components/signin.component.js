@@ -4,7 +4,6 @@ import image from "../incible-logo.png";
 import connect from "react-redux/es/connect/connect";
 import {loadUserTokenFromStorage, signIn} from "../redux/actions/users.action";
 import {CenteredLogo} from "./centered.logo";
-import NavigationBar from "./navbar.component";
 
 export class SignIn extends Component {
 
@@ -46,29 +45,31 @@ export class SignIn extends Component {
         const {email, password} = this.state;
 
         return (
-            <div className="mh-100 bg-jazz">
-                <div className="bg-ripple aligner" style={{minHeight:'93vh'}}>
-                    <div className="login ">
-                        <div className="d-flex justify-content-center h-100">
-                            <div className="card br-major h-70">
-                                <div className="card-header br-major-t text-white bg-rumblev">
+            <div className="mh-100">
+                <div className="" style={{minHeight:'93vh'}}>
+                    <div className="login">
+                        <div className="d-flex justify-content-center h-90">
+                            <div className="card  h-70">
+                                <div className="card-header">
                                     <h3 className="t-b text-center">Sign In</h3>
                                 </div>
-                                <div className="card-body">
+                                <div className="card-body ">
                                     <form>
-                                        <CenteredLogo />
+
                                         <div className="form-group">
                                             <label htmlFor="si-username" className="w-100 t-b text-left">Email</label>
-                                            <input id="si-username" type="text" className="form-control" placeholder="username" value={email} onChange={this.onChange('email')} />
+                                            <input id="si-username" type="text" className="form-control" placeholder="email" value={email} onChange={this.onChange('email')} />
                                         </div>
 
                                         <div className="form-group">
                                             <label htmlFor="si-password" className="w-100 t-b text-left">Password</label>
                                             <input id={"si-password"} type="password" className="form-control" placeholder="password" value={password} onChange={this.onChange('password')} />
                                         </div>
-                                        <button className="btn float-right login_btn bg-rumble brr text-white t-b" onClick={this.signIn}>
-                                            Login <i className="fa fa-arrow-right"/>
-                                        </button>
+                                        <div className="text-center login-btn-container">
+                                            <button className="btn text-center login-btn" onClick={this.signIn}>
+                                                Login 
+                                            </button>
+                                        </div>
                                     </form>
                                 </div>
                                 <div className="card-footer">
