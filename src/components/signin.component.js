@@ -58,7 +58,7 @@ export class SignIn extends Component {
 
                                         <div className="form-group">
                                             <label htmlFor="si-username" className="w-100 t-b text-left">Email</label>
-                                            <input id="si-username" type="text" className="form-control" placeholder="email" value={email} onChange={this.onChange('email')} />
+                                            <input id="si-username" type="text" className="form-control" placeholder="email         " value={email} onChange={this.onChange('email')} />
                                         </div>
 
                                         <div className="form-group">

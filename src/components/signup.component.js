@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import { connect } from 'react-redux';
 import {signUpUser} from "../redux/actions/users.action";
 import {Toast,Form} from "react-bootstrap";
-import {CenteredLogo} from "./centered.logo";
 import {SignUpInput} from "./signup.input";
 import {Modal} from "./portal";
 import {Toaster} from "./toast.component";
@@ -37,20 +36,19 @@ export class SignUp extends Component {
     render() {
         const {email,password,firstName,lastName,confirmPassword,showResponse} = this.state;
         return (
-            <div className="mh-100 bg-jazz">
-                <div className="mh-100 bg-ripple aligner">
+            <div className="mh-100">
+                <div className="mh-100">
                     <div className="login ">
                         <div>
                             <div className="container">
                                 <div className="d-flex justify-content-center h-100">
-                                    <div className="card br-major h-70">
-                                        <div className="card-header br-major-t bg-pop text-white">
+                                    <div className="card h-70">
+                                        <div className="card-header">
                                             <h3 className="t-b text-center">Sign Up</h3>
                                         </div>
 
                                         <div className="card-body">
                                             <form>
-                                                <CenteredLogo />
                                                 <SignUpInput
                                                     label={"First Name"}
                                                     id={"su-firstName"}
@@ -95,6 +93,7 @@ export class SignUp extends Component {
                                                     <Form.Label className={"t-b"}>Account type</Form.Label>
                                                     <Form.Control
                                                         as="select"
+                                                        className={"account-type"}
                                                         onChange={this.onChange("accountType")}
                                                     >
                                                         <option value="ADMIN">Admin</option>
@@ -102,14 +101,16 @@ export class SignUp extends Component {
                                                     </Form.Control>
                                                 </Form.Group>
                                                 <div className="form-check">
-                                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                                                    <input type="checkbox" className="form-check-input" />
                                                     <label className="form-check-label" htmlFor="exampleCheck1">&nbsp;Remember Me</label>
                                                 </div>
-                                                <button
-                                                    onClick={this.signUp}
-                                                    className="btn float-right login_btn bg-pop brr text-white t-b mt-2">
-                                                    Sign Up <i className="fa fa-arrow-right"/>
-                                                </button>
+                                                <div className="signup-btn-container">
+                                                    <button
+                                                        onClick={this.signUp}
+                                                        className="btn signup-btn m-2">
+                                                        Sign Up 
+                                                    </button>
+                                                </div>
                                             </form>
                                         </div>
                                         <div className="card-footer">

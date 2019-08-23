@@ -24,7 +24,7 @@ export const LandingPage = () => {
                 <h5 className='t-b mt-3 m-2 text-center jumbotron-text'>
                     Incible is made for every member of your team to plan, track, and organize tasks for your project.
                 </h5>
-                <div className="text-center mb-2 signup-btn">
+                <div className="text-center mb-2 join-now-btn">
                     <Link to="/signup">
                         <Button variant="primary">Join Now</Button>
                     </Link>
