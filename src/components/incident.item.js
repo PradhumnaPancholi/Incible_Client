@@ -68,7 +68,7 @@ class IncidentItem extends Component {
                         </Modal.Body>
 
                         <Modal.Footer>
-                            <button className= "btn btn-secondary"onClick={this.redirectHandler}>Close</button>
+                            <button className= "btn btn-secondary incident-close-btn"onClick={this.redirectHandler}>Close</button>
                         </Modal.Footer>
                     </Modal.Dialog>
                 </div>
