@@ -61,7 +61,7 @@ class IncidentsList extends Component {
         return (
             <React.Fragment>
                 <Container>
-                    <h1 className="t-b pt-3 pb-3">Incidents</h1>
+                    <h1 className="t-b pt-3 pb-3 incident-heading">Incidents</h1>
                     <Tabs defaultActiveKey="profile"
                           // activeKey={}
                         >

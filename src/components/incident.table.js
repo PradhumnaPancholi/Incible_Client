@@ -10,8 +10,8 @@ export const IncidentTable = ({incidents,deleteHandler}) => {
             variant="dark"
             striped bordered hover
             // size="sm"
-            className="mt-3 align-items-center rounded border">
-            <thead>
+            className="mt-3">
+            <thead className="incidents-table-head">
             <tr>
                 <th>Title</th>
                 <th>Description</th>
@@ -24,7 +24,7 @@ export const IncidentTable = ({incidents,deleteHandler}) => {
             {incidents.map(i => (
                 <tr key={i._id}>
                     <td>
-                        <Link to={`/incident/${i._id}/details`} className="a-link">
+                        <Link to={`/incident/${i._id}/details`} >
                             {i.title}
                         </Link>
                     </td>
@@ -33,7 +33,7 @@ export const IncidentTable = ({incidents,deleteHandler}) => {
                         &nbsp;{toTitleCase(i.status)}
                     </td>
                     <td>{beautifyDate(i.createdOn)}</td>
-                    <td className="text-white">
+                    <td>
                         <Link to={`/incident/${i._id}/edit`}>
                             <Button size="sm" variant="info" className="mr-2 mb-2" >
                                 Edit

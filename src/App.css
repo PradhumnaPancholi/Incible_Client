@@ -109,9 +109,7 @@ body {
 }
 
 /*React bootstrap tabs custom bg*/
-.nav-item:hover {
-  background-color: #e6e6e6;
-}
+
 
 /*Navigation Bar*/
 
@@ -124,41 +122,18 @@ body {
 .nav-a {
   border-radius: 5px;
   background-color: #292929;
-  color: white;
 }
-.dropdown-divider {
-  border-top: 1px solid #a4aeb5;
-}
-.nav.nav-tabs > a[aria-selected=true] {
-  border-top: 2px solid #ee6352;
-}
+
 #toast {
     position: fixed;
-    top: auto;
+    top: auto;  
     bottom: 0;
     left: 0;
     right: auto;
     z-index: 100;
 }
-.filter-selected {
-  border-top: 4px solid #28a745 !important;
-}
-.a-link {
-  color: #9abde3;
-}
-.a-link:hover {
-  color: #829fbf;
-}
-.pulse-animate {
-  -webkit-animation-name: pulse;
-  animation-name: pulse;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
+
+
 @-webkit-keyframes pulse {
   0% {
     opacity: 0.3
