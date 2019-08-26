@@ -46,10 +46,10 @@ export class SignIn extends Component {
 
         return (
             <div className="mh-100">
-                <div className="" style={{minHeight:'93vh'}}>
+                <div style={{minHeight:'93vh'}}>
                     <div className="login">
                         <div className="d-flex justify-content-center h-90">
-                            <div className="card  h-70">
+                            <div className="card h-70">
                                 <div className="card-header">
                                     <h3 className="t-b text-center">Sign In</h3>
                                 </div>

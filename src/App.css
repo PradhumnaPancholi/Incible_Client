@@ -23,6 +23,7 @@ body {
   font-weight: 700;
 }
 /*Backgrounds*/
+
 .bg-eggshell {
     background-color: #EDEBED;
 }
@@ -101,12 +102,7 @@ body {
 .container input:checked ~ .checkmark {
   background-color: #59CD90;
 }
-
-
 /*For incident form*/
-.incident-form{
-  margin-top: 7vh;
-}
 
 /*React bootstrap tabs custom bg*/
 

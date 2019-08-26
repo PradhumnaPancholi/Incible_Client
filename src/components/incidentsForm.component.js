@@ -27,7 +27,7 @@ class IncidentForm extends Component{
     render(){
         return(
             <div>
-                <div className="container incident-form align-self-left">
+                <div className="container incident-form">
                     <Form>
                         <Form.Group>
                             <Form.Label className="t-b">Title</Form.Label>
@@ -38,13 +38,14 @@ class IncidentForm extends Component{
                             <Form.Label className="t-b">Description</Form.Label>
                             <Form.Control as="textarea" rows="3" value={this.state.description} onChange={this.handleInputChange('description')} placeholder="Enter a description for incident" />
                         </Form.Group>
-
+                    </Form>
+                    <div className="create-incident-btn">
                         <Button
-                            className="brr"
+                            className="mt-5"
                             type="submit" onClick={this.onSubmit}>
                             Create Incident
                         </Button>
-                    </Form>
+                    </div>
                 </div>
             </div>
         )
