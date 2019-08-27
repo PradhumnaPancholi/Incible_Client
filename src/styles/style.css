@@ -7,7 +7,7 @@
   font-size: 1.8em;
 }
 
-.nav-link, .navbar-brand {
+.nav-link, .navbar-brand, .user-name, .fa-bars {
   color: #7CC2FF;
   font-size: 1.2em;
 }

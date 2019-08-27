@@ -38,7 +38,7 @@ class NavigationBar extends Component {
                     </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
                             aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"/>
+                        <i class="fas fa-bars"></i>
                     </button>
 
                     <div className="collapse navbar-collapse" id="navbarColor01">
@@ -51,19 +51,19 @@ class NavigationBar extends Component {
                             )}
                             
                         </ul>
-                        <ul className={"navbar-nav float-right"}>
+                        <ul className={"navbar-nav"}>
                             {isLoggedIn && (
-                                <div className="text-center user-name" style={{padding:8}}>
+                                <div className={"float-left user-name"} style={{padding:8}}>
                                     Hey! {userProfile.firstName}
                                 </div>
                             )}
                             {isLoggedIn && (
-                                <NavItem className={"float-right"} href={"/logout"}>
+                                <NavItem className={"float-left"} href={"/logout"}>
                                     <NavItemIcon icon={'fa-sign-out-alt'} />Logout
                                 </NavItem>
                             )}
                             {!isLoggedIn && (
-                                <NavItem className={"float-right pr-5"} href={"/login"}>
+                                <NavItem className={"pr-5"} href={"/login"}>
                                     <Button className="loginBtn">Login</Button>
                                 </NavItem>
                             )}
