@@ -12,6 +12,19 @@
   font-size: 1.2em;
 }
 
+/*existing style*/
+.navi:hover {
+  background-color: #0d0d0d !important;
+  border-radius: 5px;
+  transition: ease-in 100ms;
+}
+
+.nav-a {
+  border-radius: 5px;
+  background-color: #292929;
+}
+
+/*----*/
 .navbar-brand:hover, .nav-link:hover {
   color: #7CC2FF;
 }
@@ -31,6 +44,10 @@
 
 .footer {
   background-color: #1F3140;
+  padding: 1%;
+  text-align: center;
+  margin-bottom: 0vh;
+  position: relative;
 }
 
 .footer-content {
@@ -288,6 +305,24 @@ td a:hover {
 .create-incident-btn button:hover {
   background-color: #7CC2FF;
   color: #3E6180;
+}
+
+.detail-view {
+  background-color: #3E6180;
+}
+.detail-view a div:first-child {
+  color: #7CC2FF;
+}
+.detail-view h5 div:last-child {
+  color: #1F3140;
+}
+.detail-view p {
+  color: #7CC2FF;
+}
+
+/*for shared styling*/
+body {
+  background-color: #5E92BF;
 }
 
 /*# sourceMappingURL=style.css.map */

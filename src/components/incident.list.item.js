@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 
 export const IncidentListItem = ({incident= {} , deleteHandler}) => {
     return (
-        <div key={incident._id} className={"p-4 mt-3 container"}>
+        <div key={incident._id} className={"p-4 mt-3 container detail-view"}>
             <h5 className="t-b">
                 <Link to={`/incident/${incident._id}/details`}>
                     <div className="d-inline">
@@ -28,10 +28,10 @@ export const IncidentListItem = ({incident= {} , deleteHandler}) => {
                     <NavItemIcon icon="fa-edit"/>
                     Edit
                 </Link>
-                <Button type="submit" className="btn-sm mr-2 t-b" onClick={deleteHandler}>
+                <button type="submit" className="btn btn-sm mr-2 btn-danger btn-sm t-b" onClick={deleteHandler}>
                     <NavItemIcon icon="fa-trash"/>
                     Delete
-                </Button>
+                </button>
             </div>
         </div>
     );

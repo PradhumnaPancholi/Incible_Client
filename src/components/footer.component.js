@@ -5,7 +5,7 @@ const Footer = () => {
     return(
         <div>
             <footer class="footer navbar-static-bottom">
-                <div>
+                <div class="text-center">
                     <span className="footer-content">Copyright &copy; 2018 Incible.</span>
                 </div>
             </footer>
