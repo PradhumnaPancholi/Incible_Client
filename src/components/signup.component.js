@@ -18,7 +18,7 @@ export class SignUp extends Component {
             lastName: "",
             confirmPassword: "",
             showResponse: true,
-            userType: ""
+            accountType: "STANDARD_USER" //If user doesn't interact, then default value will be standard user//
         }
     }
 
@@ -96,8 +96,8 @@ export class SignUp extends Component {
                                                         className={"account-type"}
                                                         onChange={this.onChange("accountType")}
                                                     >
-                                                        <option value="ADMIN">Admin</option>
                                                         <option value="STANDARD_USER">Standard User</option>
+                                                        <option value="ADMIN">Admin</option>
                                                     </Form.Control>
                                                 </Form.Group>
                                                 <div className="form-check">
