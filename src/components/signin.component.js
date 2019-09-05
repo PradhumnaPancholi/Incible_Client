@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom"
-import image from "../incible-logo.png";
 import connect from "react-redux/es/connect/connect";
 import {loadUserTokenFromStorage, signIn} from "../redux/actions/users.action";
-import {CenteredLogo} from "./centered.logo";
 
 export class SignIn extends Component {
 
@@ -28,9 +26,9 @@ export class SignIn extends Component {
 
     componentDidMount() {
         loadUserTokenFromStorage();
-        if (this.props.isLoggedIn) {
+        /* if (this.props.isLoggedIn) {
             this.props.history.push("/incidents");
-        }
+        } */
     }
 
     componentWillReceiveProps(nextProps) {
