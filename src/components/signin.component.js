@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom"
-import image from "../incible-logo.png";
 import connect from "react-redux/es/connect/connect";
 import {loadUserTokenFromStorage, signIn} from "../redux/actions/users.action";
-import {CenteredLogo} from "./centered.logo";
 
 export class SignIn extends Component {
 
