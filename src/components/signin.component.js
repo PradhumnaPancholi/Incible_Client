@@ -9,7 +9,9 @@ export class SignIn extends Component {
         super(props);
         this.state = {
             email: "",
-            password: ""
+            password: "",
+            emailError: "",
+            loading: false
         }
     }
 
@@ -18,17 +20,21 @@ export class SignIn extends Component {
         this.setState({[key] : e.target.value})
     };
 
-    signIn = (e) => {
+    signIn = async (e) => {
         e.preventDefault();
+        this.setState({
+            loading: true
+        })
         const {email,password,firstName,lastName} = this.state;
+        await setInterval(() => {
+            //do nothing//
+            //this code is just so user can see loading instead of glithcy feel//
+        }, 1000); 
         this.props.signInUser({email,password})
     };
 
     componentDidMount() {
         loadUserTokenFromStorage();
-        /* if (this.props.isLoggedIn) {
-            this.props.history.push("/incidents");
-        } */
     }
 
     componentWillReceiveProps(nextProps) {
@@ -40,7 +46,7 @@ export class SignIn extends Component {
 
     render() {
 
-        const {email, password} = this.state;
+        const {email, password, loading} = this.state;
 
         return (
             <div className="mh-100">
@@ -56,7 +62,8 @@ export class SignIn extends Component {
 
                                         <div className="form-group">
                                             <label htmlFor="si-username" className="w-100 t-b text-left">Email</label>
-                                            <input id="si-username" type="text" className="form-control" placeholder="email         " value={email} onChange={this.onChange('email')} />
+                                            <input id="si-username" type="text" className="form-control" placeholder="email" value={email} onChange={this.onChange('email')} />
+                                            <p value={this.state.emailError}></p>
                                         </div>
 
                                         <div className="form-group">
@@ -64,8 +71,18 @@ export class SignIn extends Component {
                                             <input id={"si-password"} type="password" className="form-control" placeholder="password" value={password} onChange={this.onChange('password')} />
                                         </div>
                                         <div className="text-center login-btn-container">
-                                            <button className="btn text-center login-btn" onClick={this.signIn}>
-                                                Login 
+                                            <button className="btn text-center login-btn" onClick={this.signIn} disabled={loading}>
+                                                {loading && (
+                                                    <span>
+                                                        <i className="fa fa-spinner fa-spin"></i>
+                                                    </span>
+                                                )}
+                                                {!loading && (
+                                                    <div>
+                                                        Login
+                                                    </div>
+                                                )}
+                                                
                                             </button>
                                         </div>
                                     </form>

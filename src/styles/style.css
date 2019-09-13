@@ -190,8 +190,6 @@
 }
 
 .signup-btn:hover {
-  color: #1F3140;
-  background-color: #7CC2FF;
   border: 2px solid #7CC2FF;
   width: 100%;
 }
@@ -205,6 +203,10 @@
 
 .form-check-label {
   color: #1F3140;
+}
+
+.fa-spinner {
+  color: #7CC2FF;
 }
 
 .incidents-table-head {
