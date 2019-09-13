@@ -33,5 +33,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ![Image](./Incible_Snapshots/Create_Incident.png)
 
 ### Incident Details
-![Image](./Incible_Snapshots/Incident_Details)
-
+![Image](./Incible_Snapshots/Incident_Details.png)
