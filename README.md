@@ -15,25 +15,23 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 |                |                                                                     |                    |
 
 ### Home Screen
-![Image](./screenshots/Index.png)
+![Image](./Incible_Snapshots/HomeScreen.png)
 
 ### Log In
-![Image](./screenshots/logIn.png)
+![Image](./Incible_Snapshots/SignIn.png)
 
 ### Sign Up
-![Image](./screenshots/signUP.png)
+![Image](./Incible_Snapshots/SignUp.png)
 
 ###  Incident List
-![Image](./screenshots/incidentList.png)
+![Image](./Incible_Snapshots/Incidents_List.png)
+
+###  Incident List (Extended View)
+![Image](./Incible_Snapshots/Incidents_List_ExtendedView.png)
 
 ### Create Incident
-![Image](./screenshots/createIncident.png) 
+![Image](./Incible_Snapshots/Create_Incident.png)
 
 ### Incident Details
-![Image](./screenshots/incidentDetails.png) 
+![Image](./Incible_Snapshots/Incident_Details)
 
-### Incident Edit
-![Image](./screenshots/editIncident.png) 
-
-### Users List
-![Image](./screenshots/usersList.png) 
